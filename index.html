@@ -1,9 +1,98 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="Asset_Tracking_System.LoginPage" %>
+
 <!DOCTYPE html>
-<html>
-  <title>Javapoint</title>
-  <body>
-    <h1>first heading</h1>
-    <h3>second heading</h3>
-    <p>first para</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLPI</title>
+    <link rel="icon" href="img/glpi Title icon.png" type="image/icon type">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript">
+   $(function () {
+       $('#TextBox1').focus();
+});
+    </script>
+    <style type="text/css">
+        body{
+            background-color:#f5f7fb;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server" method="POST">
+        <div class="container">
+                      <div class="row" style="height:180px">
+                          <div class="col-lg-3 mx-auto">                             
+                              <img src="img/glpi.png" alt="Logo" />
+                          </div>
+                        
+
+            </div>
+      <div class="row">
+
+         <div class="col-lg-6 mx-auto">
+            <div class="card">
+               <div class="card-body">
+                  
+                  <div class="row">
+                     <div class="col">
+                        <center>
+                           <h3>Login to your account</h3>
+                        </center>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <hr>
+                     </div>
+                  </div>
+                   <%--<asp:Label ID="timelbl" runat="server" Text="Label"></asp:Label>--%>
+                  <div class="row">
+                     <div class="col">
+                        <label>UserName</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Username"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ForeColor="red" ErrorMessage="Username cannot be empty"></asp:RequiredFieldValidator>
+                        </div>
+                        <label>Password</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ForeColor="red" ErrorMessage="Password cannot be empty"></asp:RequiredFieldValidator>
+                         <center>
+                             <asp:Label ID="Label2" runat="server" ForeColor="red"></asp:Label>
+                        </center>
+                        </div><br />
+                         <div class="form-group">
+                             <asp:CheckBox ID="CheckBox1" runat="server" />&nbsp&nbsp<asp:Label ID="Label1" runat="server" Text="Remember me"></asp:Label>
+                        </div><br />
+                        <div class="form-group">
+                           <asp:Button class="btn-block btn-lg" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" BackColor="#FEC95C" BorderWidth="1px" />
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+           
+         </div>
+      </div>
+   </div>
+    </form>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+</body>
 </html>
